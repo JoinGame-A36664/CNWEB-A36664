@@ -103,31 +103,30 @@ class Main extends Component {
                     return (
                               <div className="d-flex ">
                                         <LeftMenu point={this.state.point} complete={this.state.complete}
-
                                                   notComplete={this.state.notComplete} />
-                                        <div className={this.props.isAuthenticated === false ? "d-none" : ""}>
-                                                  <div className="d-flex  justify-content-between  flex-column" >
+                                        <div>
 
-                                                            <MainContent
-                                                                      OnChangeData={this.setDataChange}
-                                                                      data={this.filterKeyword(this.state.testData, this.state.keyWord)}
-                                                                      keyWord={this.state.keyWord}
-                                                                      searchOnChange={(e) => this.searchOnChange(e)}
+                                        </div>
+                                        <div className="d-flex  justify-content-between  flex-column" >
+
+                                                  <MainContent
+                                                            OnChangeData={this.setDataChange}
+                                                            data={this.filterKeyword(this.state.testData, this.state.keyWord)}
+                                                            keyWord={this.state.keyWord}
+                                                            searchOnChange={(e) => this.searchOnChange(e)}
+                                                  />
+
+
+                                                  <div className="h-50 d-flex justify-content-center ">
+                                                            <Pagination itemClass="page-item" linkClass="page-link"
+                                                                      activePage={this.state.currentPage}
+                                                                      itemsCountPerPage={this.state.pageSize}
+                                                                      totalItemsCount={this.state.totalCount}
+                                                                      pageRangeDisplayed={this.state.pageSize}
+                                                                      onChange={this.onChangePage.bind(this)}
                                                             />
-
-
-                                                            <div className="h-50 d-flex justify-content-center ">
-                                                                      <Pagination itemClass="page-item" linkClass="page-link"
-                                                                                activePage={this.state.currentPage}
-                                                                                itemsCountPerPage={this.state.pageSize}
-                                                                                totalItemsCount={this.state.totalCount}
-                                                                                pageRangeDisplayed={this.state.pageSize}
-                                                                                onChange={this.onChangePage.bind(this)}
-                                                                      />
-                                                            </div>
-
-
                                                   </div>
+
 
                                         </div>
 

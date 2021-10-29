@@ -11,7 +11,7 @@ function App() {
                     <>
                               <Login></Login>
 
-                              <Main isAuthenticated={isAuthenticated}></Main>
+                              <Main isAuthenticated></Main>
                     </>
           );
 }

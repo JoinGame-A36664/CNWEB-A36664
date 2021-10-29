@@ -103,9 +103,8 @@ class Main extends Component {
                     return (
                               <div className="d-flex ">
                                         <LeftMenu point={this.state.point} complete={this.state.complete}
-
                                                   notComplete={this.state.notComplete} />
-                                        <div className={this.props.isAuthenticated === false ? "d-none" : ""}>
+                                        <div className={this.props.isAuthenticated===true}>
                                                   <div className="d-flex  justify-content-between  flex-column" >
 
                                                             <MainContent
@@ -130,7 +129,7 @@ class Main extends Component {
                                                   </div>
 
                                         </div>
-
+                                    
 
 
                               </div>
